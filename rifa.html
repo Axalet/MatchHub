@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Hub | Rifa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="imagenes/favicon.png" rel="icon">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark match-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="imagenes/matchhub.png" alt="Match Hub" class="logo-icon">
+                MATCH HUB
+            </a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <div class="navbar-nav ms-auto nav-links">
+                    <a class="nav-link" href="comunidad.html">COMUNIDAD</a>
+                    <a class="nav-link" href="hub.html">HUB</a>
+                    <a class="nav-link" href="asesores.html">ASESORES</a>
+                    <a class="nav-link" href="rifa.html">RIFA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="rifa-hero-parallax">
+        <div class="rifa-hero-content">
+            <h1>RIFA</h1>
+            <p>Participa con un aporte pequeño y gana videojuegos digitales dentro de la comunidad.</p>
+        </div>
+    </section>
+
+    <section class="rifa pagina-seccion" id="rifa">
+        <div class="section-heading">
+            <h2>ENTRA A LA RIFA</h2>
+            <p>Primero inicia sesión, después elige una de las rifas disponibles y registra tu entrada.</p>
+        </div>
+
+        <div class="rifa-opciones" id="rifaOpciones">
+            <article class="rifa-premio rifa-opcion is-selected" data-rifa="aaa" data-precio="50"
+                data-premio="Juego AAA digital">
+                <span class="rifa-tag">Rifa principal</span>
+                <h3>Juego AAA digital</h3>
+                <p>Participa por un juego premium seleccionado por la comunidad. Ideal para quienes quieren ganar un
+                    lanzamiento grande.</p>
+                <div class="rifa-meta">
+                    <span>Entrada: <strong>$50 MXN</strong></span>
+                    <span>Participantes: <strong id="participantesCountAaa">4</strong></span>
+                </div>
+                <button type="button" class="btn-match-light seleccionar-rifa" data-rifa="aaa">Elegir esta rifa</button>
+            </article>
+
+            <article class="rifa-premio rifa-opcion" data-rifa="random" data-precio="10"
+                data-premio="Juego random digital">
+                <span class="rifa-tag">Rifa económica</span>
+                <h3>Juego random digital</h3>
+                <p>Una opción más barata para participar por un juego sorpresa. Perfecta para incentivar la actividad en
+                    la plataforma.</p>
+                <div class="rifa-meta">
+                    <span>Entrada: <strong>$10 MXN</strong></span>
+                    <span>Participantes: <strong id="participantesCountRandom">4</strong></span>
+                </div>
+                <button type="button" class="btn-match-light seleccionar-rifa" data-rifa="random">Elegir esta
+                    rifa</button>
+            </article>
+        </div>
+
+        <div class="rifa-layout">
+            <article class="rifa-panel">
+                <h3>Acceso a la plataforma</h3>
+                <p id="estadoSesion" class="estado-sesion">No has iniciado sesión.</p>
+
+                <form id="loginForm" class="login-form-rifa">
+                    <input type="text" id="loginUsuario" placeholder="Tu usuario gamer">
+                    <input type="email" id="loginCorreo" placeholder="Correo electrónico">
+                    <button type="submit">INICIAR SESIÓN</button>
+                </form>
+
+                <form id="pagoForm" class="pago-form-rifa oculto">
+                    <p class="rifa-seleccion-texto" id="rifaSeleccionTexto">Rifa seleccionada: Juego AAA digital — $50
+                        MXN</p>
+                    <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+                    <input type="text" id="numeroTarjeta" maxlength="19" placeholder="0000 0000 0000 0000">
+                    <div class="pago-grid">
+                        <input type="text" id="fechaTarjeta" maxlength="5" placeholder="MM/AA">
+                        <input type="password" id="cvvTarjeta" maxlength="3" placeholder="CVV">
+                    </div>
+                    <button type="submit" id="pagarRifaBtn">PAGAR $50 Y PARTICIPAR</button>
+                </form>
+
+                <div class="rifa-resultado oculto" id="rifaResultado">
+                    <h3>Ya estás participando</h3>
+                    <p id="rifaResultadoTexto">Tu entrada fue registrada correctamente.</p>
+                </div>
+            </article>
+
+            <article class="participantes-box">
+                <h3>Participantes actuales</h3>
+                <p id="participantesTitulo">Rifa AAA</p>
+                <ul id="listaParticipantes">
+                    <li>Gacofan3</li>
+                    <li>Lauta349</lsi>
+                    <li>Inosita2.0</li>
+                    <li>ManGamer</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <div class="modal fade" id="rifaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content match-modal">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="rifaModalTitulo">Rifa</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="rifaModalTexto">Estado de la rifa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2026 Match Hub - Diseño Web HTML5, CSS3, Bootstrap y JavaScript</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

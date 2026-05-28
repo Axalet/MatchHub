@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Hub | Asesores Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="imagenes/favicon.png" rel="icon">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark match-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="imagenes/matchhub.png" alt="Match Hub" class="logo-icon">
+                MATCH HUB
+            </a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
+                aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <div class="navbar-nav ms-auto nav-links">
+                    <a class="nav-link" href="comunidad.html">COMUNIDAD</a>
+                    <a class="nav-link" href="hub.html">HUB</a>
+                    <a class="nav-link" href="asesores.html">ASESORES</a>
+                    <a class="nav-link" href="rifa.html">RIFA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="asesores pagina-seccion" id="asesores">
+        <div class="section-heading">
+            <h2>ASESORES</h2>
+            <p>Contrata jugadores expertos para mejorar en tus juegos favoritos con asesorías personalizadas.</p>
+        </div>
+
+        <div class="advisor-stage" id="advisorStage" aria-live="polite">
+            <button class="advisor-arrow advisor-prev" type="button" id="advisorPrev"
+                aria-label="Asesor anterior">❮</button>
+
+            <article class="advisor-3d-card" data-index="0" data-nombre="ProLegend" data-rol="CS2 Coach"
+                data-rating="5.0 ★" data-precio="$150 MXN / sesión"
+                data-descripcion="Especialista en aim, control de recoil y toma de decisiones en rondas competitivas de CS2. Ideal si quieres subir de rango con entrenamiento estructurado.">
+                <div class="advisor-img-wrap">
+                    <img src="https://i.pinimg.com/736x/43/b6/73/43b6730fc70652c38aa320fde833a73d.jpg"
+                        alt="Axalet asesor de CS2 Coach">
+                </div>
+                <div class="advisor-info">
+                    <span class="advisor-badge">Más calificado</span>
+                    <h3>ProLegend</h3>
+                    <p>CS2 Coach</p>
+                    <strong>5.0 ★</strong>
+                    <span class="advisor-price">$150 MXN / sesión</span>
+                    <button class="btn-match-primary advisor-info-btn" type="button">Ver descripción</button>
+                </div>
+            </article>
+            <article class="advisor-3d-card" data-index="1" data-nombre="NinjaPlay" data-rol="Fortnite Coach"
+                data-rating="4.8 ★" data-precio="$120 MXN / sesión"
+                data-descripcion="Te ayuda a mejorar construcción, edición, rotaciones y peleas de corta distancia en Fortnite. Perfecto para jugadores que quieren volverse más rápidos.">
+                <div class="advisor-img-wrap">
+                    <img src="https://i.pinimg.com/1200x/13/4a/eb/134aeb5994ac6fcec630605fb5519ab5.jpg"
+                        alt="NinjaPlay asesor de Fortnite Coach">
+                </div>
+                <div class="advisor-info">
+                    <span class="advisor-badge">Construcción</span>
+                    <h3>NinjaPlay</h3>
+                    <p>Fortnite Coach</p>
+                    <strong>4.8 ★</strong>
+                    <span class="advisor-price">$120 MXN / sesión</span>
+                    <button class="btn-match-primary advisor-info-btn" type="button">Ver descripción</button>
+                </div>
+            </article>
+            <article class="advisor-3d-card" data-index="2" data-nombre="ReyMaster" data-rol="Call of Duty Coach"
+                data-rating="4.7 ★" data-precio="$135 MXN / sesión"
+                data-descripcion="Entrenador enfocado en posicionamiento, lectura de mapa, clases de armas y comunicación de equipo para partidas ranked de Call of Duty.">
+                <div class="advisor-img-wrap">
+                    <img src="https://i.pinimg.com/1200x/c5/e5/48/c5e54876d27904828508fdd4a2ba9962.jpg"
+                        alt="ReyMaster asesor de Call of Duty Coach">
+                </div>
+                <div class="advisor-info">
+                    <span class="advisor-badge">Ranked</span>
+                    <h3>ReyMaster</h3>
+                    <p>Call of Duty Coach</p>
+                    <strong>4.7 ★</strong>
+                    <span class="advisor-price">$135 MXN / sesión</span>
+                    <button class="btn-match-primary advisor-info-btn" type="button">Ver descripción</button>
+                </div>
+            </article>
+            <article class="advisor-3d-card" data-index="3" data-nombre="GhostAim" data-rol="Apex Legends Coach"
+                data-rating="4.6 ★" data-precio="$110 MXN / sesión"
+                data-descripcion="Asesor para mejorar tracking, movimiento, selección de leyendas y decisiones en peleas de escuadra dentro de Apex Legends.">
+                <div class="advisor-img-wrap">
+                    <img src="https://i.pinimg.com/1200x/d7/ba/33/d7ba33b760e63e121344f72d43a9af1b.jpg"
+                        alt="GhostAim asesor de Apex Legends Coach">
+                </div>
+                <div class="advisor-info">
+                    <span class="advisor-badge">Aim</span>
+                    <h3>GhostAim</h3>
+                    <p>Apex Legends Coach</p>
+                    <strong>4.6 ★</strong>
+                    <span class="advisor-price">$110 MXN / sesión</span>
+                    <button class="btn-match-primary advisor-info-btn" type="button">Ver descripción</button>
+                </div>
+            </article>
+            <article class="advisor-3d-card" data-index="4" data-nombre="PixelCoach" data-rol="Valorant Coach"
+                data-rating="4.5 ★" data-precio="$100 MXN / sesión"
+                data-descripcion="Ideal para aprender utilidad, ángulos, economía, comunicación y control mental en partidas competitivas de Valorant.">
+                <div class="advisor-img-wrap">
+                    <img src="https://i.pinimg.com/736x/72/88/56/728856e99c37a402b033affc2750b34f.jpg"
+                        alt="PixelCoach asesor de Valorant Coach">
+                </div>
+                <div class="advisor-info">
+                    <span class="advisor-badge">Estrategia</span>
+                    <h3>PixelCoach</h3>
+                    <p>Valorant Coach</p>
+                    <strong>4.5 ★</strong>
+                    <span class="advisor-price">$100 MXN / sesión</span>
+                    <button class="btn-match-primary advisor-info-btn" type="button">Ver descripción</button>
+                </div>
+            </article>
+
+            <button class="advisor-arrow advisor-next" type="button" id="advisorNext"
+                aria-label="Siguiente asesor">❯</button>
+        </div>
+    </section>
+
+    <div class="modal fade" id="advisorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content match-modal">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="advisorModalTitle">Asesor</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="advisorModalRole" class="advisor-modal-role"></p>
+                    <p id="advisorModalDesc"></p>
+                    <strong id="advisorModalRating"></strong>
+                    <span id="advisorModalPrice" class="advisor-price d-block mt-2"></span>
+                    <button type="button" class="btn-match-primary mt-3" data-bs-dismiss="modal">Solicitar
+                        asesoría</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2026 Match Hub - Diseño Web HTML5, CSS3, Bootstrap y JavaScript</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
